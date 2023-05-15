@@ -1,0 +1,28 @@
+@import "Font-custom";
+
+// Variabili di stile
+$white-color: #fff;
+$hover-color: #23ced5;
+$text-color: #26313c;
+$dash-color: #343a40;
+$p-color: #808080;
+$water-color: #24cdd5;
+$font-family-text: "Open Sans";
+$font-family-header: "Montserrat";
+$linear-gradient: linear-gradient(
+  to right,
+  #5192e1 0%,
+  #23ced5 51%,
+  #5192e1 100%
+);
+
+// Function conversione PX to REM
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+@mixin textProperty($size, $color, $family) {
+  font-size: toRem($size);
+  color: $color;
+  font-family: $family;
+}
